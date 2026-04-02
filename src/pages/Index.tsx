@@ -220,9 +220,9 @@ export default function Index() {
           className="flex items-center gap-2 transition-transform hover:scale-105"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">G</span>
+            <span className="font-sans text-xl font-bold text-foreground">Т</span>
           </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">GetPro</span>
+          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Татьяна</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -265,12 +265,12 @@ export default function Index() {
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Запуск и стабильная работа вашей школы
+                Настрою платформу с нуля или возьму на себя поддержку
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Берём на себя всё техническое: настройку, интеграции, автоворонки и поддержку — чтобы вы занимались обучением, а не техникой.
+                Чтобы вы могли сфокусироваться на продукте, а не на «винтиках» системы.
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
