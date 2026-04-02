@@ -4,105 +4,90 @@ import { useReveal } from "@/hooks/use-reveal"
 export function AboutSection({ scrollToSection }: { scrollToSection?: (index: number) => void }) {
   const { ref, isVisible } = useReveal(0.3)
 
-  const utps = [
-    {
-      title: "Быстро и без лишних усилий с вашей стороны",
-      text: "Внедряю решение «под ключ» — от настройки тренингов до интеграции анкет и приёма платежей. Вам не нужно тратить время на обучение или исправление ошибок.",
-    },
-    {
-      title: "Точность и предсказуемость",
-      text: "Никаких нарушений дедлайнов. Работаю по чётким ТЗ и предоставляю своевременные отчёты о проделанной работе.",
-    },
-    {
-      title: "Тот самый «человек в теме»",
-      text: "Понимаю задачи с полуслова. Вам не придётся тратить часы на объяснение элементарных вещей — я сама предложу технические новшества, если это усилит продукт.",
-    },
-  ]
-
-  const reviews = [
-    {
-      text: "Татьяна эффективна в деловой коммуникации, обладает хорошими исполнительскими качествами и ответственностью перед обязательствами",
-      author: "Галина Савиных",
-      company: "Всероссийская Школа Методистов",
-    },
-    {
-      text: "Работает быстро и качественно, предлагает новшества, которые мы с радостью внедрили. Человек полностью «в теме» — не требуется дополнительных объяснений",
-      author: "Майя",
-      company: "Проект по запуску онлайн-курсов",
-    },
-  ]
-
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center overflow-y-auto px-4 pt-20 md:px-12 md:pt-0 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start items-center px-4 pt-20 md:px-12 md:pt-0 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-7xl py-8">
-        {/* Header */}
-        <div
-          className={`mb-8 transition-all duration-700 md:mb-10 ${
-            isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
-          }`}
-        >
-          <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Почему выбирают меня
-          </h2>
-          <p className="font-mono text-sm text-foreground/60">/ УТП через боли клиента</p>
-        </div>
+      <div className="mx-auto w-full max-w-7xl">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
+          {/* Left side - Story */}
+          <div>
+            <div
+              className={`mb-6 transition-all duration-700 md:mb-12 ${
+                isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
+              }`}
+            >
+              <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
+                Техника —
+                <br />
+                наша зона
+                <br />
+                <span className="text-foreground/40">ответственности</span>
+              </h2>
+            </div>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
-          {/* Left — УТП */}
-          <div className="space-y-5">
-            {utps.map((item, i) => (
-              <div
-                key={i}
-                className={`border-l border-foreground/20 pl-4 transition-all duration-700 md:pl-6 ${
-                  isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
-                }`}
-                style={{ transitionDelay: `${150 + i * 120}ms` }}
-              >
-                <p className="mb-1 font-sans text-sm font-medium text-foreground md:text-base">{item.title}</p>
-                <p className="text-xs leading-relaxed text-foreground/70 md:text-sm">{item.text}</p>
-              </div>
-            ))}
+            <div
+              className={`space-y-3 transition-all duration-700 md:space-y-4 ${
+                isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
+              style={{ transitionDelay: "200ms" }}
+            >
+              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
+                Мы — команда специалистов с глубокой экспертизой в GetCourse. Настраиваем, запускаем и поддерживаем онлайн-школы так, чтобы всё работало без сбоев.
+              </p>
+              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
+                Вы занимаетесь контентом и учениками — мы берём на себя всё остальное: от первой настройки до ежедневной поддержки.
+              </p>
+            </div>
           </div>
 
-          {/* Right — Отзывы */}
-          <div className="space-y-5">
-            {reviews.map((review, i) => (
-              <div
-                key={i}
-                className={`transition-all duration-700 ${
-                  isVisible ? "translate-x-0 opacity-100" : "translate-x-12 opacity-0"
-                }`}
-                style={{ transitionDelay: `${300 + i * 150}ms` }}
-              >
-                <p className="mb-3 font-mono text-xs leading-relaxed text-foreground/60 md:text-sm">
-                  «{review.text}»
-                </p>
-                <div className="flex items-center gap-2">
-                  <div className="h-px w-4 bg-foreground/30" />
+          {/* Right side - Stats with creative layout */}
+          <div className="flex flex-col justify-center space-y-6 md:space-y-12">
+            {[
+              { value: "120+", label: "Школ", sublabel: "Запущено и сопровождается", direction: "right" },
+              { value: "5", label: "Лет", sublabel: "Работы с GetCourse", direction: "left" },
+              { value: "98%", label: "Клиентов", sublabel: "Продолжают работать с нами", direction: "right" },
+            ].map((stat, i) => {
+              const getRevealClass = () => {
+                if (!isVisible) {
+                  return stat.direction === "left" ? "-translate-x-16 opacity-0" : "translate-x-16 opacity-0"
+                }
+                return "translate-x-0 opacity-100"
+              }
+
+              return (
+                <div
+                  key={i}
+                  className={`flex items-baseline gap-4 border-l border-foreground/30 pl-4 transition-all duration-700 md:gap-8 md:pl-8 ${getRevealClass()}`}
+                  style={{
+                    transitionDelay: `${300 + i * 150}ms`,
+                    marginLeft: i % 2 === 0 ? "0" : "auto",
+                    maxWidth: i % 2 === 0 ? "100%" : "85%",
+                  }}
+                >
+                  <div className="text-3xl font-light text-foreground md:text-6xl lg:text-7xl">{stat.value}</div>
                   <div>
-                    <p className="font-sans text-xs font-medium text-foreground">{review.author}</p>
-                    <p className="font-mono text-xs text-foreground/50">{review.company}</p>
+                    <div className="font-sans text-base font-light text-foreground md:text-xl">{stat.label}</div>
+                    <div className="font-mono text-xs text-foreground/60">{stat.sublabel}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 
         <div
-          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-10 md:gap-4 ${
+          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
           }`}
-          style={{ transitionDelay: "700ms" }}
+          style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
             Оставить заявку
           </MagneticButton>
           <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
-            Мои кейсы
+            Наши кейсы
           </MagneticButton>
         </div>
       </div>
