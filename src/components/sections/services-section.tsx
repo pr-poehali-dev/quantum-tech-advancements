@@ -17,29 +17,29 @@ export function ServicesSection() {
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Услуги
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Наши компетенции</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Что мы берём на себя</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Веб-разработка",
-              description: "Создание современных веб-приложений любой сложности",
+              title: "Запуск школы",
+              description: "Настройка GetCourse с нуля: структура курсов, оплата, личный кабинет ученика — готово к первым продажам за 3–5 дней",
               direction: "top",
             },
             {
-              title: "UI/UX Дизайн",
-              description: "Проектирование удобных и красивых интерфейсов",
+              title: "Автоворонки и продажи",
+              description: "Создание цепочек писем, авторассылок, продающих страниц и триггерных сценариев для роста выручки",
               direction: "right",
             },
             {
-              title: "Мобильные приложения",
-              description: "Кроссплатформенная разработка для iOS и Android",
+              title: "Интеграции",
+              description: "Подключаем Tinkoff, Яндекс.Касса, Telegram-боты, AmoCRM, Bitrix24 и любые сторонние сервисы",
               direction: "left",
             },
             {
-              title: "Консалтинг",
-              description: "Техническая экспертиза и стратегическое планирование",
+              title: "Техническая поддержка",
+              description: "Постоянное сопровождение: исправление ошибок, обновления, консультации — отвечаем в течение часа",
               direction: "bottom",
             },
           ].map((service, i) => (

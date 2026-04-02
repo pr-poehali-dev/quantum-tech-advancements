@@ -15,31 +15,31 @@ export function WorkSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Проекты
+            Кейсы
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Избранные работы</p>
+          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Реальные результаты клиентов</p>
         </div>
 
         <div className="space-y-6 md:space-y-8">
           {[
             {
               number: "01",
-              title: "ТехноСтарт",
-              category: "Корпоративный портал",
+              title: "Онлайн-школа английского",
+              category: "Запуск с нуля — 3 дня до первых продаж",
               year: "2024",
               direction: "left",
             },
             {
               number: "02",
-              title: "АльфаТрейд",
-              category: "Финтех платформа",
+              title: "Академия маркетинга",
+              category: "Переезд с другой платформы — без потери учеников",
               year: "2024",
               direction: "right",
             },
             {
               number: "03",
-              title: "МедиаПульс",
-              category: "Медиа сервис",
+              title: "Школа психологии",
+              category: "Автоворонка + интеграция с Tinkoff — конверсия ×2",
               year: "2023",
               direction: "left",
             },
